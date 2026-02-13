@@ -57,12 +57,10 @@
 	console.log("\nExercise 1E:");
 	var todaysDate = new Date();
 	// en-CA
-	let enCADate = new Intl.DateTimeFormat('en-CA').format(todaysDate);
-	console.log("en-CA date is: ", enCADate);
+	console.log("en-CA date is: ", todaysDate.toLocaleDateString('en-CA'));
 	
 	// en-US
-	let enUSDate = new Intl.DateTimeFormat('en-US').format(todaysDate);
-	console.log("en-US date is: ", enUSDate);
+	console.log("en-US date is: ", todaysDate.toLocaleDateString('en-US'));
 	
 	console.log("The year is: ", todaysDate.getFullYear());
 	console.log("The month in numerical form is: ", todaysDate.getMonth());
@@ -83,5 +81,4 @@
 	console.log("The season is: ", season);
  </script>
 </body>
-
 </html>
