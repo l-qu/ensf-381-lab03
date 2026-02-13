@@ -1,0 +1,47 @@
+let classRoster = ["Alice", "Tom", "Charlie", "Diana", "Evan"]
+console.log(classRoster.toString())
+console.log(classRoster)
+classRoster.push("Fiona", "Nancy")
+console.log(classRoster)
+let removed = classRoster.shift()
+console.log(removed)
+console.log(classRoster)
+console.log(classRoster.length)
+
+let classInfo = {
+    className: "ENSF381: Full-Stack Web Development",
+    instructor: "Dr. Smith",
+    students: classRoster,
+    details: {
+        semester: "Winter",
+        year: 2025,
+    },
+}
+
+classInfo.schedule = ["Monday", "Wednesday", "Friday"]
+classInfo.instructor = "Dr. Abdellatif";
+
+console.log(classInfo.className)
+console.log(classInfo.instructor)
+console.log(classInfo.students)
+
+console.log(classInfo.details.semester);
+
+console.log(classInfo);
+
+let className = classInfo.className;
+let students = classInfo.students;
+console.log(className);
+console.log(students);
+
+let semester = classInfo.details.semester;
+let year = classInfo.details.year;
+console.log(semester);
+console.log(year);
+
+let student1 = classInfo.students[0];
+let student2 = classInfo.students[1];
+let remainingStudents = classInfo.students.slice(2,);
+console.log(student1);
+console.log(student2);
+console.log(remainingStudents);
