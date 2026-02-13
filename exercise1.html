@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lab3 -- Exercise 1</title>
+</head>
+<body>
+ <h1>JavaScript Lab Exercise 1</h1>
+ <script>
+	console.log("Exercise 1A:");
+	var testOne = "Test One";
+	let testTwo = "Test Two";
+	const testThree = "Test Three";
+	
+	console.log(testOne);
+	console.log(testTwo);
+	console.log(testThree);
+	
+	testTwo = "Test Two Edited";
+	console.log(testTwo);
+	
+	try{
+		testThree = "Test Three Edited";
+		console.log(testThree)
+	}catch(error){
+		console.log("Error: Cannot reassign const.");
+	}
+
+	console.log("\nExercise 1B:");
+	let string2 = "JavaScript is fun!";
+	let string1 = "Hello, World!";
+	
+	let lenString1 = string1.length;
+	console.log("Length of '", string1, "' is: ", lenString1);
+	
+	let concentrate = string1 + " " + string2;
+	console.log("Concentrated string is: ", concentrate);
+	
+	var string3 = concentrate.replace("fun", "awesome");
+	console.log("Replaces string is: ", string3);
+	
+	console.log("\nExercise 1C:");
+	let name = "Alice";
+	let age = 25;
+	let template = `My name is ${name} and I am ${age} years old.`;
+	console.log(template);
+	
+	console.log("\nExercise 1D:");
+	const students = ["Alice", "Tom", "Charlie"];
+	const ages = [19, 21, 20]
+	for(let i = 0; i < students.length;i++){
+		let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old.`;
+		console.log(studentInfo);
+	}
+	
+	console.log("\nExercise 1E:");
+	var todaysDate = new Date();
+	// en-CA
+	console.log("en-CA date is: ", todaysDate.toLocaleDateString('en-CA'));
+	
+	// en-US
+	console.log("en-US date is: ", todaysDate.toLocaleDateString('en-US'));
+	
+	console.log("The year is: ", todaysDate.getFullYear());
+	console.log("The month in numerical form is: ", todaysDate.getMonth());
+	console.log("The day of the week is: ", todaysDate.toLocaleDateString('en-CA', {weekday: 'long'}));
+	
+	let season = "Unknown"
+	
+	if (todaysDate.getMonth() == 11 || todaysDate.getMonth() == 0 || todaysDate.getMonth() == 1){
+		season = "Winter";
+	} else if (todaysDate.getMonth() == 2 || todaysDate.getMonth() == 3 || todaysDate.getMonth() == 4){
+		season = "Spring";
+	} else if (todaysDate.getMonth() == 5 || todaysDate.getMonth() == 6 || todaysDate.getMonth() == 7){
+		season = "Summer";
+	} else{
+		season = "Fall";
+	}
+	
+	console.log("The season is: ", season);
+ </script>
+</body>
+</html>
